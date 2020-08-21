@@ -1,0 +1,70 @@
+{
+    "name": "bam2fqs_v1.0.0",
+    "title": "bam2fqs_v1.0.0",
+    "summary": "Convert bams to fastqs for reanalysis purposes",
+    "dxapi": "1.0.0",
+    "version": "1.0.0",
+    "properties": {
+      "githubRelease": "v1.0.0"
+    },
+    "inputSpec": [
+      {
+        "name": "bam",
+        "label": "Bam file to convert",
+        "class": "file",
+        "optional": false,
+        "patterns": [
+            "*.bam"
+        ],
+        "help": "Bam file to convert back to fastqs"
+      }
+    ],
+    "outputSpec": [
+      {
+        "name": "fastq1",
+        "label": "Fastq1",
+        "class": "file",
+        "patterns": [
+          "*.fastq.gz"
+        ],
+        "help": "First fastq output from bedtools bamtofastq"
+      },
+      {
+        "name": "fastq2",
+        "label": "Fastq2",
+        "class": "file",
+        "patterns": [
+            "*.fastq.gz"
+        ],
+        "help": "Second fastq output from bedtools bamtofastq"
+      }
+    ],
+    "runSpec": {
+      "timeoutPolicy": {
+        "*": {
+          "hours": 2
+        }
+      },
+      "interpreter": "bash",
+      "release": "16.04",
+      "distribution": "Ubuntu",
+      "file": "src/bam2fqs.sh"
+    },
+    "access": {
+      "project": "CONTRIBUTE",
+      "allProjects": "VIEW",
+      "network": [
+        "*"
+      ]
+    },
+    "regionalOptions": {
+      "aws:eu-central-1": {
+        "systemRequirements": {
+          "*": {
+            "instanceType": "mem1_ssd1_v2_x4"
+          }
+        }
+      }
+    }
+  }
+  
