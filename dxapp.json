@@ -1,11 +1,11 @@
 {
-    "name": "bam2fqs_v1.0.0",
-    "title": "bam2fqs_v1.0.0",
+    "name": "bam2fqs_v1.0.1",
+    "title": "bam2fqs_v1.0.1",
     "summary": "Convert bams to fastqs for reanalysis purposes",
     "dxapi": "1.0.0",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "properties": {
-      "githubRelease": "v1.0.0"
+      "githubRelease": "v1.0.1"
     },
     "inputSpec": [
       {
@@ -42,7 +42,7 @@
     "runSpec": {
       "timeoutPolicy": {
         "*": {
-          "hours": 2
+          "hours": 6
         }
       },
       "interpreter": "bash",
