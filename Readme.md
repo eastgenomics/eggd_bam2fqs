@@ -1,5 +1,5 @@
 <!-- dx-header -->
-# vcf_annotator (DNAnexus Platform App)
+# bam2fqs (DNAnexus Platform App)
 
 ## What does this app do?
 
@@ -21,7 +21,7 @@ This app outputs 2 gzipped fastqs.
 Example cmd line:
 
 ``` bash
-dx run bam2fqs_v1.0.0 -ibam=file.bam
+dx run bam2fqs_v1.0.1 -ibam=file.bam
 ```
 
 ### This app was made by EMEE GLH
