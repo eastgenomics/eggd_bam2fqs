@@ -28,7 +28,7 @@ main() {
     # Run samtools, bedtools until you get fastqs
     samtools sort -n ${bam_name} -o ${bam_name}_sorted.bam
     samtools fixmate -O bam ${bam_name}_sorted.bam ${bam_name}_sorted_fix.bam
-    bedtools bamtofastq -i ${bam_name}_sorted_fix.bam -fq ${sample_id}_R1.fastq -fq2 ${sample_id}_R2.fastq
+    bedtools bamtofastq -i ${bam_name}_sorted_fix.bam -fq ${sample_id}_R1_bam2fasted.fastq -fq2 ${sample_id}_R2_bam2fasted.fastq
     gzip ${sample_id}_R*_bam2fasted.fastq
 
     # Upload the fastqs
