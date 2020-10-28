@@ -29,7 +29,7 @@ main() {
     samtools sort -n ${bam_name} -o ${bam_name}_sorted.bam
     samtools fixmate -O bam ${bam_name}_sorted.bam ${bam_name}_sorted_fix.bam
     bedtools bamtofastq -i ${bam_name}_sorted_fix.bam -fq ${sample_id}_R1.fastq -fq2 ${sample_id}_R2.fastq
-    gzip ${sample_id}_R*.fastq
+    gzip ${sample_id}_R*_bam2fasted.fastq
 
     # Upload the fastqs
     mkdir -p /home/dnanexus/out/fastq1
